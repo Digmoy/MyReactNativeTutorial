@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function App() {
+import TextInputScreen from './textinput-view/Textinputview';
+import MainScreen from './main-view/Main';
+import ListViewScreen from './list-view/ListView';
+import FlatListScreen from './flatList-view/FlatList'
+
+
+const Stack = createNativeStackNavigator()
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+        name = "Main"
+        component={MainScreen}
+        options={{ title : 'Welcome'}}/>
+        
+        <Stack.Screen
+        name ='TextInput'
+        component = {TextInputScreen}/>
+
+        <Stack.Screen
+        name ='ListView'
+        component = {ListViewScreen}/>
+
+        <Stack.Screen
+        name = 'FlatList'
+        component = {FlatListScreen}/>
+        
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
+
