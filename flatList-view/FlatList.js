@@ -1,36 +1,47 @@
 import React, { useState } from 'react';
-import {StyleSheet, Text, View, FlatList } from 'react-native';
+import {StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 
 const FlatListScreen =({ navigation }) =>{
     const [fruit,setFruit] = useState([
-        { name: 'Apple', key: '1'},
-        { name: 'Watermelon', key: '2'},
-        { name: 'Orange', key: '3'},
-        { name: 'Pear', key: '4'},
-        { name: 'Cherry', key: '5'},
-        { name: 'Strawberry', key: '6'},
-        { name: 'Nectarine', key: '7'},
-        { name: 'Grape', key: '8'},
-        { name: 'Mango', key: '9'},
-        { name: 'Blueberry', key: '10'},
-        { name: 'Pomegranate', key: '11'},
-        { name: 'Plum', key: '12'},
-        { name: 'Banana', key: '13'},
-        { name: 'Raspberry', key: '14'},
-        { name: 'Mandarin', key: '15'},
-        { name: 'Jackfruit', key: '16'},
-        { name: 'Papaya', key: '17'},
-        { name: 'Kiwi', key: '18'},
-        { name: 'Pineapple', key: '19'},
-        { name: 'Lime', key: '20'},
+        { name: 'Apple', id: '1'},
+        { name: 'Watermelon', id: '2'},
+        { name: 'Orange', id: '3'},
+        { name: 'Pear', id: '4'},
+        { name: 'Cherry', id: '5'},
+        { name: 'Strawberry', id: '6'},
+        { name: 'Nectarine', id: '7'},
+        { name: 'Grape', id: '8'},
+        { name: 'Mango', id: '9'},
+        { name: 'Blueberry', id: '10'},
+        { name: 'Pomegranate', id: '11'},
+        { name: 'Plum', id: '12'},
+        { name: 'Banana', id: '13'},
+        { name: 'Raspberry', id: '14'},
+        { name: 'Mandarin', id: '15'},
+        { name: 'Jackfruit', id: '16'},
+        { name: 'Papaya', id: '17'},
+        { name: 'Kiwi', id: '18'},
+        { name: 'Pineapple', id: '19'},
+        { name: 'Lime', id: '20'},
       ])
+
+    const pressHandler = (id) =>{
+        console.log(id)
+        setFruit((prevFruit) => {
+            return prevFruit.filter(item => item.id != id)
+        })
+    }
 
     return(
         <View style={styles.container}>
             <FlatList
+            keyExtractor={(item) => item.id}
              data={fruit}
              renderItem={({ item }) => (
-                <Text style={styles.itemStyle}>{item.name}</Text>
+                 <TouchableOpacity onPress = {() => pressHandler(item.id)}>
+                    <Text style={styles.itemStyle}>{item.name}</Text>
+                 </TouchableOpacity>
+              
              )}
             />
         </View>

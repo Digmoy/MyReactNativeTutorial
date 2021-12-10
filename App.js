@@ -6,6 +6,8 @@ import TextInputScreen from './textinput-view/Textinputview';
 import MainScreen from './main-view/Main';
 import ListViewScreen from './list-view/ListView';
 import FlatListScreen from './flatList-view/FlatList'
+import AlertScreen from './alert/alert';
+import ImageScreen from './image/Image';
 
 
 const Stack = createNativeStackNavigator()
@@ -30,6 +32,16 @@ const App = () => {
         <Stack.Screen
         name = 'FlatList'
         component = {FlatListScreen}/>
+
+        <Stack.Screen
+        name='Alert'
+        component = {AlertScreen}/>
+
+        <Stack.Screen
+        name='Image'
+        component = {ImageScreen}/>
+        
+
         
       </Stack.Navigator>
     </NavigationContainer>

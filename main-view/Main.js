@@ -15,6 +15,14 @@ const MainScreen = ({navigation }) => {
             <TouchableHighlight style={styles.buttonStyle}>
             <Button title='FlatList' onPress={() => navigation.navigate('FlatList')}/>
             </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Alert' onPress={() => navigation.navigate('Alert')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Image' onPress={() => navigation.navigate('Image')}/>
+            </TouchableHighlight>
         </View>
     )
 }
