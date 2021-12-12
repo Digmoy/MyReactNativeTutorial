@@ -21,6 +21,10 @@ const MainScreen = ({navigation }) => {
             </TouchableHighlight>
 
             <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Custom Alert' onPress={() => navigation.navigate('Custom_Alert')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
             <Button title='Image' onPress={() => navigation.navigate('Image')}/>
             </TouchableHighlight>
         </View>

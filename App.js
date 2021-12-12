@@ -7,6 +7,7 @@ import MainScreen from './main-view/Main';
 import ListViewScreen from './list-view/ListView';
 import FlatListScreen from './flatList-view/FlatList'
 import AlertScreen from './alert/alert';
+import CustomAlertScreen from './alert/custom_alert';
 import ImageScreen from './image/Image';
 
 
@@ -40,6 +41,10 @@ const App = () => {
         <Stack.Screen
         name='Image'
         component = {ImageScreen}/>
+
+        <Stack.Screen
+        name='Custom_Alert'
+        component = {CustomAlertScreen}/>
         
 
         
