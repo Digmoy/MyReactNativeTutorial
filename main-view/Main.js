@@ -27,6 +27,14 @@ const MainScreen = ({navigation }) => {
             <TouchableHighlight style={styles.buttonStyle}>
             <Button title='Image' onPress={() => navigation.navigate('Image')}/>
             </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Custom Button' onPress={() => navigation.navigate('Custom Button')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='UseEffect' onPress={() => navigation.navigate('UseEffect')}/>
+            </TouchableHighlight>
         </View>
     )
 }

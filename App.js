@@ -9,6 +9,8 @@ import FlatListScreen from './flatList-view/FlatList'
 import AlertScreen from './alert/alert';
 import CustomAlertScreen from './alert/custom_alert';
 import ImageScreen from './image/Image';
+import CustomButtonScreen from './custom_button/Custom_button';
+import UseEffectScreen from './useEffect/UseEffect';
 
 
 const Stack = createNativeStackNavigator()
@@ -45,6 +47,14 @@ const App = () => {
         <Stack.Screen
         name='Custom_Alert'
         component = {CustomAlertScreen}/>
+
+        <Stack.Screen
+        name='Custom Button'
+        component= {CustomButtonScreen}/>
+
+        <Stack.Screen
+        name='UseEffect'
+        component= {UseEffectScreen}/>
         
 
         
