@@ -11,6 +11,8 @@ import CustomAlertScreen from './alert/custom_alert';
 import ImageScreen from './image/Image';
 import CustomButtonScreen from './custom_button/Custom_button';
 import UseEffectScreen from './useEffect/UseEffect';
+import SwitchScreen from './switch/Switch';
+import LoaderScreen from './Loader/Loader';
 
 
 const Stack = createNativeStackNavigator()
@@ -55,6 +57,14 @@ const App = () => {
         <Stack.Screen
         name='UseEffect'
         component= {UseEffectScreen}/>
+
+        <Stack.Screen
+          name='switch'
+          component={SwitchScreen}/>
+
+        <Stack.Screen
+          name='Loader'
+          component={LoaderScreen} />
         
 
         
