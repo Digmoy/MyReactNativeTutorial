@@ -1,9 +1,11 @@
 import React from 'react';
-import {StyleSheet, Button, View , TouchableHighlight} from 'react-native';
+import {StyleSheet, Button, View , TouchableHighlight,ScrollView} from 'react-native';
 
 const MainScreen = ({navigation }) => {
     return(
         <View style={styles.screenStyle}>
+            <ScrollView>
+          
             <TouchableHighlight style={styles.buttonStyle}>
             <Button title='TextInput' onPress={() => navigation.navigate('TextInput')}/>
             </TouchableHighlight>
@@ -43,6 +45,17 @@ const MainScreen = ({navigation }) => {
             <TouchableHighlight style={styles.buttonStyle}>
             <Button title='Loader' onPress={() => navigation.navigate('Loader')}/>
             </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Section' onPress={() => navigation.navigate('Section')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Pressable' onPress={() => navigation.navigate('press')}/>
+            </TouchableHighlight>
+
+                  
+            </ScrollView>
         </View>
     )
 }

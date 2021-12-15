@@ -31,6 +31,22 @@ const styles = StyleSheet.create({
         fontSize: 40,
         color: 'red',
         padding: 20
+   },
+   itemStyle: {
+    backgroundColor: 'pink',
+    padding: 10,
+    marginVertical: 10,
+   },
+   titleStyle: {
+    fontSize: 16
+   },
+   headerStyle: {
+    fontSize: 18
+   },
+   pressStyle: {
+       padding: 15,
+       marginVertical: 10,
+       fontSize: 20
    }
 })
 

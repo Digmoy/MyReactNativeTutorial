@@ -13,63 +13,75 @@ import CustomButtonScreen from './custom_button/Custom_button';
 import UseEffectScreen from './useEffect/UseEffect';
 import SwitchScreen from './switch/Switch';
 import LoaderScreen from './Loader/Loader';
+import SectionListScreen from './SectionList/SectionList';
+import PressableScreen from './press/PressableScreen';
 
 
 const Stack = createNativeStackNavigator()
 
 const App = () => {
   return (
+  
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-        name = "Main"
-        component={MainScreen}
-        options={{ title : 'Welcome'}}/>
-        
-        <Stack.Screen
-        name ='TextInput'
-        component = {TextInputScreen}/>
 
         <Stack.Screen
-        name ='ListView'
-        component = {ListViewScreen}/>
+          name="Main"
+          component={MainScreen}
+          options={{ title: 'Welcome' }} />
 
         <Stack.Screen
-        name = 'FlatList'
-        component = {FlatListScreen}/>
+          name='TextInput'
+          component={TextInputScreen} />
 
         <Stack.Screen
-        name='Alert'
-        component = {AlertScreen}/>
+          name='ListView'
+          component={ListViewScreen} />
 
         <Stack.Screen
-        name='Image'
-        component = {ImageScreen}/>
+          name='FlatList'
+          component={FlatListScreen} />
 
         <Stack.Screen
-        name='Custom_Alert'
-        component = {CustomAlertScreen}/>
+          name='Alert'
+          component={AlertScreen} />
 
         <Stack.Screen
-        name='Custom Button'
-        component= {CustomButtonScreen}/>
+          name='Image'
+          component={ImageScreen} />
 
         <Stack.Screen
-        name='UseEffect'
-        component= {UseEffectScreen}/>
+          name='Custom_Alert'
+          component={CustomAlertScreen} />
+
+        <Stack.Screen
+          name='Custom Button'
+          component={CustomButtonScreen} />
+
+        <Stack.Screen
+          name='UseEffect'
+          component={UseEffectScreen} />
 
         <Stack.Screen
           name='switch'
-          component={SwitchScreen}/>
+          component={SwitchScreen} />
 
         <Stack.Screen
           name='Loader'
           component={LoaderScreen} />
-        
 
-        
+        <Stack.Screen
+          name='Section'
+          component={SectionListScreen} />
+
+          <Stack.Screen
+            name='press'
+            component={PressableScreen} />
+
       </Stack.Navigator>
+    
     </NavigationContainer>
+
   );
 }
 
