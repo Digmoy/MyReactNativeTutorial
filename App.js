@@ -15,13 +15,14 @@ import SwitchScreen from './switch/Switch';
 import LoaderScreen from './Loader/Loader';
 import SectionListScreen from './SectionList/SectionList';
 import PressableScreen from './press/PressableScreen';
+import RefreshControlScreen from './Refresh_Control/RefreshControl';
 
 
 const Stack = createNativeStackNavigator()
 
 const App = () => {
   return (
-  
+
     <NavigationContainer>
       <Stack.Navigator>
 
@@ -74,12 +75,16 @@ const App = () => {
           name='Section'
           component={SectionListScreen} />
 
-          <Stack.Screen
-            name='press'
-            component={PressableScreen} />
+        <Stack.Screen
+          name='Pressable'
+          component={PressableScreen} />
+
+        <Stack.Screen
+          name='RefreshControl'
+          component={RefreshControlScreen} />
 
       </Stack.Navigator>
-    
+
     </NavigationContainer>
 
   );

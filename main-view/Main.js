@@ -51,7 +51,11 @@ const MainScreen = ({navigation }) => {
             </TouchableHighlight>
 
             <TouchableHighlight style={styles.buttonStyle}>
-            <Button title='Pressable' onPress={() => navigation.navigate('press')}/>
+            <Button title='Pressable' onPress={() => navigation.navigate('Pressable')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='RefreshControl' onPress={() => navigation.navigate('RefreshControl')}/>
             </TouchableHighlight>
 
                   

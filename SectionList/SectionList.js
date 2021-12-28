@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import { SectionList, Text, View } from "react-native";
 import styles from "../styles";
 
