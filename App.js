@@ -16,6 +16,11 @@ import LoaderScreen from './Loader/Loader';
 import SectionListScreen from './SectionList/SectionList';
 import PressableScreen from './press/PressableScreen';
 import RefreshControlScreen from './Refresh_Control/RefreshControl';
+import AppearanceScreen from './Appearance/Appearance';
+import DeviceInfoScreen from './DeviceInfo/DeviceInfo';
+import AnimationScreen from './Animation/Animation';
+import PlatformColorScreen from './PlatformColor/PlatformColor';
+
 
 
 const Stack = createNativeStackNavigator()
@@ -82,6 +87,24 @@ const App = () => {
         <Stack.Screen
           name='RefreshControl'
           component={RefreshControlScreen} />
+
+        <Stack.Screen
+          name='Appearance'
+          component={AppearanceScreen} />
+
+        <Stack.Screen
+          name='DeviceInfo'
+          component={DeviceInfoScreen} />
+
+        <Stack.Screen
+          name='Animation'
+          component={AnimationScreen} />
+
+        <Stack.Screen
+          name='PlatformColor'
+          component={PlatformColorScreen} />
+
+      
 
       </Stack.Navigator>
 

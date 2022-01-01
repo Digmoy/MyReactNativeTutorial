@@ -58,6 +58,23 @@ const MainScreen = ({navigation }) => {
             <Button title='RefreshControl' onPress={() => navigation.navigate('RefreshControl')}/>
             </TouchableHighlight>
 
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Appearance' onPress={() => navigation.navigate('Appearance')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='DeviceInfo' onPress={() => navigation.navigate('DeviceInfo')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='Animation' onPress={() => navigation.navigate('Animation')}/>
+            </TouchableHighlight>
+
+            <TouchableHighlight style={styles.buttonStyle}>
+            <Button title='PlatformColor' onPress={() => navigation.navigate('PlatformColor')}/>
+            </TouchableHighlight>
+
+        
                   
             </ScrollView>
         </View>
